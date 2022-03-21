@@ -1,0 +1,19 @@
+GET http://localhost:3000/users
+
+###
+
+PUT http://localhost:3000/post/1/views
+
+###
+
+PUT http://localhost:3000/publish/2
+
+###
+POST http://localhost:3000/signup
+###
+
+GET http://localhost:3000/user/3/drafts
+
+###
+
+DELETE  http://localhost:3000/post/1
