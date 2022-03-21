@@ -108,10 +108,27 @@ app.get(`/post/:id`, async (req, res) => {
   return res.json(result);
 })
 
-app.get('/feed', async (req, res) => {
+// app.get("/feed", async (req, res) => {
+//   const { searchString, skip, take } = req.query;
 
-})
+//   const or = searchString ? {
+//     OR: [
+//       { title: { contains: searchString as string } },
+//       { content: { contains: searchString as string } },
+//     ],
+//   } : {}
 
+//   const result = await prisma.post.findMany({
+//     where: {
+//       published: true,
+//       ...or
+//     },
+//     skip: Number(skip) || undefined,
+//     take: Number(take) || undefined,
+//   });
+
+//   res.json(result);
+// });
 const server = app.listen(3000, () =>
   console.log(`
 🚀 Server ready at: http://localhost:3000
