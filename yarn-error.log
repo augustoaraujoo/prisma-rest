@@ -1,0 +1,47 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Residencia\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\Users\Residencia\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Residencia\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Users\Residencia\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Residencia\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.14.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: UNKNOWN: unknown error, unlink 'C:\Users\Residencia\AppData\Local\Yarn\Cache\v6\npm-finalhandler-1.1.2-b7e7d000ffd11938d0fdb053506f6ebabe9f587d-integrity\node_modules\finalhandler\.yarn-metadata.json'
+
+npm manifest: 
+  {
+    "name": "rest-express",
+    "version": "1.0.0",
+    "license": "MIT",
+    "scripts": {
+      "dev": "ts-node src/index.ts"
+    },
+    "dependencies": {
+      "@prisma/client": "3.11.0",
+      "express": "4.17.3"
+    },
+    "devDependencies": {
+      "@types/express": "4.17.13",
+      "@types/node": "16.11.26",
+      "prisma": "3.11.0",
+      "ts-node": "10.7.0",
+      "typescript": "4.6.2"
+    },
+    "prisma": {
+      "seed": "ts-node prisma/seed.ts"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
