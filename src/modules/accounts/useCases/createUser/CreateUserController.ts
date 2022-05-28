@@ -5,10 +5,10 @@ class CreateUserController {
     constructor(private createUserUseCase: CreateUserUseCase) { }
     async handle(request: Request, response: Response) {
 
-        const { name, email } = request.body;
+        const { name, email, confirmPassword, password } = request.body;
 
         try {
-            const create = await this.createUserUseCase.execute({ email, name });
+            const create = await this.createUserUseCase.execute({ email, name, confirmPassword, password });
             return response.status(201).json(create);
         } catch (error) {
             return response.status(400).json({ err: error })

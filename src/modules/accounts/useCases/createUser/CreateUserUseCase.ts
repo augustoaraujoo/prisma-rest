@@ -2,17 +2,21 @@ import { PrismaClient } from "@prisma/client";
 
 interface IRequest {
     email: string;
-    name: string
+    name: string;
+    password: string;
+    confirmPassword: string;
 }
 
 class CreateUserUseCase {
-    constructor(private prisma: PrismaClient) {}
+    constructor(private prisma: PrismaClient) { }
 
-    async execute({ email, name }: IRequest) {
+    async execute({ email, name, confirmPassword, password }: IRequest) {
         const user = await this.prisma.user.create({
             data: {
                 email,
-                name
+                name,
+                password,
+                confirmPassword
             }
         })
         return user;
