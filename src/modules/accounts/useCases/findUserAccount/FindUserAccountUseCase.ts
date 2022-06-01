@@ -1,18 +1,19 @@
 import { PrismaClient } from "@prisma/client";
+
 interface IRequest {
-    name?: string,
-    email: string,
-    password?: string,
+    email: string;
 }
+
 class FindUserAccountUseCase {
     constructor(private prisma: PrismaClient) { }
 
     async execute({ email }: IRequest) {
-        const find = await this.prisma.user.findUnique({
+        const find = await this.prisma.user.findMany({
             where: {
-                email: email,
+                email: email
             }
-        })
+        });
+        
         return find;
     }
 }
