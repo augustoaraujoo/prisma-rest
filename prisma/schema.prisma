@@ -3,26 +3,27 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
-}
-
-model User {
-  id   Int   @id @default(autoincrement())
-  avatar String?
-  email String @unique
-  name  String?
-  password String @default("")
-  confirmPassword String @default("")
-  card Card[]
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
 model Card {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
   title     String?
-  value   Int
+  value     Int
   published Boolean  @default(false)
-  author    User?    @relation(fields: [authorId], references: [email])
   authorId  String?
+  User      User?    @relation(fields: [authorId], references: [email])
+}
+
+model User {
+  id              Int     @id @default(autoincrement())
+  avatar          String?
+  email           String  @unique
+  name            String?
+  password        String  @default("")
+  confirmPassword String  @default("")
+  Card            Card[]
 }
