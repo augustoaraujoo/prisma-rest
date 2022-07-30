@@ -8,6 +8,9 @@
     "start": "node ./dist/server.js",
     "studio": "npx prisma studio"
   },
+  "engines": {
+    "node": "16.16.0"
+  },
   "dependencies": {
     "@prisma/client": "3.11.0",
     "cors": "^2.8.5",
