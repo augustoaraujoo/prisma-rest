@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/server.js"
+    "start": "yarn run build && node dist/server.js",
+    "build": "tsc --watch"
   },
   "engines": {
     "node": "16.16.0"
