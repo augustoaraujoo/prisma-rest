@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "node server.ts",
-    "build": "tsc --watch",
-    "start": "node ./dist/server.js",
-    "studio": "npx prisma studio"
+    "start": "node dist/server.js"
   },
   "engines": {
     "node": "16.16.0"
@@ -32,3 +29,4 @@
     "seed": "ts-node prisma/seed.ts"
   }
 }
+
