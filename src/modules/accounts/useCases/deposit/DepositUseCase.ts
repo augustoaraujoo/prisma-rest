@@ -12,8 +12,8 @@ class DepositUseCase {
             data: {
                 value,
                 title,
-                author: {
-                    connect: {
+                User:{
+                    connect:{
                         email
                     }
                 }

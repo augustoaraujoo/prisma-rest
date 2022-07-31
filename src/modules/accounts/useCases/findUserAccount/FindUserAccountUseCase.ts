@@ -9,9 +9,8 @@ class FindUserAccountUseCase {
 
     async execute({ email }: IRequest) {
         const find = await this.prisma.user.findMany({
-            /* LISTANDO UM USUÁRIO COM SEU RELACIONAMENTO 'card' 🔴 🔴 🔴 */
             include: {
-                card: true
+                Card: true
             },
             where: {
                 email: email

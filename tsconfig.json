@@ -11,11 +11,5 @@
       "baseUrl": ".",
       "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-  },
-  "include": [
-      "**/*"
-  ],
-  "exclude": [
-      "node_modules",
-      "**/*.spec.ts"
-  ]}
+  }
+}
