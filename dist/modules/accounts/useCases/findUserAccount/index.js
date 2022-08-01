@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.findUserAccountController = void 0;
+const FindUserAccountController_1 = require("./FindUserAccountController");
+const FindUserAccountUseCase_1 = require("./FindUserAccountUseCase");
+const client_1 = require("@prisma/client");
+const prisma = new client_1.PrismaClient();
+const findUserAccountUseCase = new FindUserAccountUseCase_1.FindUserAccountUseCase(prisma);
+const findUserAccountController = new FindUserAccountController_1.FindUserAccountController(findUserAccountUseCase);
+exports.findUserAccountController = findUserAccountController;

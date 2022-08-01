@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.depositController = void 0;
+const client_1 = require("@prisma/client");
+const DepositController_1 = require("./DepositController");
+const DepositUseCase_1 = require("./DepositUseCase");
+const prisma = new client_1.PrismaClient();
+const depositUseCase = new DepositUseCase_1.DepositUseCase(prisma);
+const depositController = new DepositController_1.DepositController(depositUseCase);
+exports.depositController = depositController;
